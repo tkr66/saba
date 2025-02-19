@@ -1,5 +1,6 @@
 use alloc::string::String;
 
+#[derive(PartialEq, Debug)]
 pub struct Attribute {
     name: String,
     value: String,

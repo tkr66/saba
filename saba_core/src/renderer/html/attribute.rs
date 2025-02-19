@@ -6,8 +6,11 @@ pub struct Attribute {
 }
 
 impl Attribute {
-    pub fn new(name: String, value: String) -> Self {
-        Self { name, value }
+    pub fn new() -> Self {
+        Self {
+            name: String::new(),
+            value: String::new(),
+        }
     }
 
     pub fn add_char(&mut self, ch: char, is_name: bool) {
@@ -24,5 +27,11 @@ impl Attribute {
 
     pub fn value(&self) -> String {
         self.value.clone()
+    }
+}
+
+impl Default for Attribute {
+    fn default() -> Self {
+        Self::new()
     }
 }
